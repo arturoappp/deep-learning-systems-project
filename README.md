@@ -32,7 +32,7 @@ pip install torch==2.11.0 --index-url https://download.pytorch.org/whl/cu128
 pip install -r requirements.txt
 ```
 
-On a CPU the notebook still runs, but training is considerably slower. The notebook seeds every random generator and enables PyTorch's deterministic algorithms; exact numbers can still differ slightly between CPU and GPU or between GPU models.
+On a CPU the notebook still runs, but training is much slower: in a CPU-only test one Transformer epoch took about 7 minutes, so the full run (12 epochs for each of the two models) takes two hours or more. The notebook seeds every random generator and enables PyTorch's deterministic algorithms; exact numbers can still differ slightly between CPU and GPU or between GPU models.
 
 To regenerate the dependency file from the project environment:
 
